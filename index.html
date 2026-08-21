@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MFTSDJDD');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>System Status | Rob Holdings</title>
+  <meta name="description" content="Current service status for Rob Holdings infrastructure and self-hosted services.">
+
+  <link rel="canonical" href="https://status.robholdings.com/">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="https://www.robholdings.com/favicon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://status.robholdings.com/">
+  <meta property="og:title" content="System Status | Rob Holdings">
+  <meta property="og:description" content="Current service status for Rob Holdings infrastructure and self-hosted services.">
+  <meta property="og:site_name" content="Rob Holdings">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="System Status | Rob Holdings">
+  <meta name="twitter:description" content="Current service status for Rob Holdings infrastructure and self-hosted services.">
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFTSDJDD"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <nav>
+    <a class="site-home" href="https://www.robholdings.com/" aria-label="Rob Holdings home">
+      <span class="site-home-mark">RH</span>
+    </a>
+    <a href="#services">Services</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <p>Rob Holdings Infrastructure</p>
+      <h1>System Status</h1>
+      <h2>Service availability and health.</h2>
+      <p>
+        Live status for public-facing services operated as part of the
+        Rob Holdings home lab.
+      </p>
+    </section>
+
+    <section id="services" class="status-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Current Status</p>
+          <h2>Services</h2>
+        </div>
+        <p class="last-checked">Automated checks coming soon</p>
+      </div>
+
+      <div class="overall-status status-pending">
+        <div class="status-summary">
+          <span class="status-dot" aria-hidden="true"></span>
+          <div>
+            <h3>Status checks being configured</h3>
+            <p>Monitoring will report service availability here.</p>
+          </div>
+        </div>
+        <span class="status-label">Setup</span>
+      </div>
+
+      <div class="service-list">
+        <article class="service-row">
+          <div class="service-info">
+            <h3>Minecraft Server</h3>
+            <p>mc.robholdings.com</p>
+          </div>
+          <div class="service-status status-pending">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Pending</span>
+          </div>
+        </article>
+
+        <article class="service-row service-future">
+          <div class="service-info">
+            <h3>Media Server</h3>
+            <p>media.robholdings.com</p>
+          </div>
+          <div class="service-status status-muted">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>Coming Soon</span>
+          </div>
+        </article>
+      </div>
+
+      <p class="status-note">
+        Only externally available services are listed. Internal infrastructure
+        components are intentionally omitted.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>© 2026 Rob Holdings</p>
+      <a href="https://www.robholdings.com/">robholdings.com ↗</a>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,437 @@
+/* =========================
+   Base
+========================= */
+
+:root {
+  --bg: #0b0d10;
+  --surface: #12151a;
+  --surface-soft: rgba(255, 255, 255, 0.025);
+  --border: #252a32;
+  --text: #f2f4f7;
+  --muted: #9da5b1;
+  --accent: #67e8f9;
+  --success: #6ee7a8;
+  --warning: #f4c96b;
+  --offline: #f47b7b;
+  --max-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+
+/* =========================
+   Navigation
+========================= */
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
+
+  background: rgba(11, 13, 16, 0.92);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.site-home {
+  margin-right: auto;
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+nav a:not(.site-home) {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+
+/* =========================
+   Main Layout
+========================= */
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+section:last-child {
+  border-bottom: 0;
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.hero > p:first-child,
+.eyebrow {
+  color: var(--accent);
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero > p:first-child {
+  margin-bottom: 1.25rem;
+}
+
+.hero h1 {
+  font-size: clamp(4rem, 10vw, 7.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  margin-bottom: 1rem;
+}
+
+.hero h2 {
+  color: var(--muted);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  margin-bottom: 2rem;
+}
+
+.hero > p:last-child {
+  max-width: 650px;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+
+/* =========================
+   Status
+========================= */
+
+.status-section h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -0.04em;
+}
+
+.section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  margin-bottom: 0.35rem;
+}
+
+.last-checked {
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding-bottom: 0.4rem;
+}
+
+.overall-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+}
+
+.status-summary {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.status-summary h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.status-summary p {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.status-label {
+  flex-shrink: 0;
+  color: var(--warning);
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.status-dot {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--warning);
+  box-shadow: 0 0 0 4px rgba(244, 201, 107, 0.08);
+}
+
+.service-list {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--surface-soft);
+}
+
+.service-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  min-height: 92px;
+  padding: 1.35rem 1.5rem;
+
+  border-bottom: 1px solid var(--border);
+}
+
+.service-row:last-child {
+  border-bottom: 0;
+}
+
+.service-info h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+
+.service-info p {
+  color: var(--muted);
+  font-family:
+    "SFMono-Regular",
+    Consolas,
+    "Liberation Mono",
+    monospace;
+  font-size: 0.82rem;
+}
+
+.service-status {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+
+  color: var(--warning);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.status-muted {
+  color: var(--muted);
+}
+
+.status-muted .status-dot {
+  background: #59616d;
+  box-shadow: none;
+}
+
+.status-operational {
+  color: var(--success);
+}
+
+.status-operational .status-dot {
+  background: var(--success);
+  box-shadow: 0 0 0 4px rgba(110, 231, 168, 0.08);
+}
+
+.status-offline {
+  color: var(--offline);
+}
+
+.status-offline .status-dot {
+  background: var(--offline);
+  box-shadow: 0 0 0 4px rgba(244, 123, 123, 0.08);
+}
+
+.status-note {
+  max-width: 700px;
+  margin-top: 1.25rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+  border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.footer-inner a {
+  transition: color 0.2s ease;
+}
+
+.footer-inner a:hover {
+  color: var(--accent);
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 700px) {
+  nav {
+    gap: 1.25rem;
+    padding: 1rem 1.25rem;
+  }
+
+  main {
+    padding: 0 1.25rem;
+  }
+
+  section {
+    padding: 4rem 0;
+  }
+
+  .hero {
+    min-height: 65vh;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.4rem, 17vw, 5rem);
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .last-checked {
+    margin-top: 0.6rem;
+    padding-bottom: 0;
+  }
+
+  .overall-status {
+    align-items: flex-start;
+  }
+
+  .status-label {
+    display: none;
+  }
+
+  .service-row {
+    align-items: flex-start;
+    gap: 1rem;
+    min-height: 0;
+  }
+
+  .service-status {
+    padding-top: 0.15rem;
+  }
+
+  .footer-inner {
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-row {
+    display: block;
+  }
+
+  .service-status {
+    margin-top: 0.75rem;
+  }
+}
