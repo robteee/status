@@ -64,18 +64,18 @@
           <p class="eyebrow">Current Status</p>
           <h2>Services</h2>
         </div>
-        <p class="last-checked">Automated checks coming soon</p>
+        <p class="last-checked" id="last-checked">Checking status...</p>
       </div>
 
-      <div class="overall-status status-pending">
+      <div class="overall-status status-pending" id="overall-status">
         <div class="status-summary">
           <span class="status-dot" aria-hidden="true"></span>
           <div>
-            <h3>Status checks being configured</h3>
-            <p>Monitoring will report service availability here.</p>
+            <h3 id="overall-title">Checking systems...</h3>
+            <p>Public-facing services are monitored automatically.</p>
           </div>
         </div>
-        <span class="status-label">Setup</span>
+        <span class="status-label" id="overall-label">Checking</span>
       </div>
 
       <div class="service-list">
@@ -84,7 +84,7 @@
             <h3>Minecraft Server</h3>
             <p>mc.robholdings.com</p>
           </div>
-          <div class="service-status status-pending">
+          <div class="service-status status-pending" id="minecraft-status">
             <span class="status-dot" aria-hidden="true"></span>
             <span>Pending</span>
           </div>
@@ -115,5 +115,6 @@
       <a href="https://www.robholdings.com/">robholdings.com ↗</a>
     </div>
   </footer>
+  <script src="status.js"></script>
 </body>
 </html>
