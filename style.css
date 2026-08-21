@@ -229,7 +229,7 @@ section:last-child {
 
 .status-label {
   flex-shrink: 0;
-  color: var(--warning);
+    color: inherit;
   font-family:
     "SFMono-Regular",
     Consolas,
